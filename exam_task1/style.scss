@@ -19,6 +19,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: #22B573;
+	justify-content: center;
+	align-items: center;
+
+
 
 	.main {
 		justify-content: center;
@@ -26,10 +30,27 @@ body {
 		align-items: center;
 		color: #F2F2F2;
 
+		@media screen and (max-width: 768px) {
+			text-align: left;
+		}
+	
+		@media screen and (max-width: 453px) {
+			text-align: left;
+		}
+
 		.title {
 			margin-top: 0.5em;
 			font-weight: 200;
 			letter-spacing: 3px;
+
+			@media screen and (max-width: 768px) {
+				text-align: left;
+				font-size: 20px;
+			}
+		
+			@media screen and (max-width: 453px) {
+				text-align: left;
+			}
 		}
 	}
 	.hamburger {
@@ -86,17 +107,28 @@ body {
 		display: flex;
 		flex-direction: row;
 		height: 100vh;
-		padding: 40px;
-		gap: 40px;
+		padding-top: 4em;
+		padding-left: 10em;
+		padding-right: 10em;
+		width: 90%;
+		gap: 60px;
 		font-family: 'Roboto', sans-serif;
 	
 		@media screen and (max-width: 768px) {
 			flex-direction: column;
 			padding-top: 100px;
+			width: 100%;
+			padding-left: 2em;
+			padding-right: 2em;
+			height: 100%;
 		}
 	
 		@media screen and (max-width: 453px) {
 			flex-direction: column;
+			width: 100%;
+			padding-left: 2em;
+			padding-right: 2em;
+			height: 100%;
 		}
 		
 		.first-container,
@@ -104,25 +136,28 @@ body {
 		.third-container {
 			flex-basis: 50%;
 			flex-direction: row;
-			height: 60%;
+			height: 65%;
 			margin-bottom: 20px;
 	
 			@media screen and (max-width: 768px) {
 				flex-basis: 100%;
 				height: 50%;
+				margin-bottom: 0;
 			}
 		
 			@media screen and (max-width: 453px) {
 				flex-basis: 100%;
 				height: 50%;
+				margin-bottom: 0;
 			}
 	
 			h5 {
 				font-weight: 800;
-				margin-top: 20px;
+				margin-top: 30px;
 				margin-bottom: 30px;
 				color: #FCB84C;
-				padding-left: 20px;
+				padding-left: 30px;
+				line-height: 1.5em;
 	
 				@media screen and (max-width: 453px) {
 					margin-top: 20px;
@@ -131,9 +166,9 @@ body {
 			}
 			p {
 				margin-bottom: 50px;
-				width: 80%;
-				line-height: 2em;
-				padding-left: 20px;
+				width: 90%;
+				line-height: 1.6em;
+				padding-left: 30px;
 	
 				@media screen and (max-width: 453px) {
 					margin-bottom: 1em;
@@ -165,12 +200,14 @@ body {
 		letter-spacing: 3px;
 		background-color: #22B573;
 		color: #FCB84C;
-		top: 70%;
+		top: 80%;
 		padding: 20px;
 		margin-left: 0;
 
 		@media screen and (max-width: 453px) {
+			position: relative;
 			margin-bottom: 1em;
+			padding: 10px;
 		}
 	}
 }
